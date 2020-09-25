@@ -36,6 +36,7 @@ public class Spawner : MonoBehaviour
             creator3 = Instantiate(creator, new Vector3(-1.15f, 7f, 0f), Quaternion.identity);
             creator4 = Instantiate(creator, new Vector3(2.4f, 7f, 0f), Quaternion.identity);
             creator5 = Instantiate(creator, new Vector3(-2.4f, 7f, 0f), Quaternion.identity);
+            InvokeRepeating("SetLetters", 1f, 4f);
         }
         else if (mode == (int)Difficulty.difficulty.medium)
         {
@@ -44,6 +45,7 @@ public class Spawner : MonoBehaviour
             creator2 = Instantiate(creator, new Vector3(-.667f, 7f, 0f), Quaternion.identity);
             creator3 = Instantiate(creator, new Vector3(2f, 7f, 0f), Quaternion.identity);
             creator4 = Instantiate(creator, new Vector3(-2f, 7f, 0f), Quaternion.identity);
+            InvokeRepeating("SetLetters", 1f, 5f);
         }
         else
         {
@@ -51,9 +53,9 @@ public class Spawner : MonoBehaviour
             creator1 = Instantiate(creator, new Vector3(0f, 7f, 0f), Quaternion.identity);
             creator2 = Instantiate(creator, new Vector3(2f, 7f, 0f), Quaternion.identity);
             creator3 = Instantiate(creator, new Vector3(-2f, 7f, 0f), Quaternion.identity);
+            InvokeRepeating("SetLetters", 1f, 7f);
         }
-        
-        InvokeRepeating("SetLetters", 0f, 5f);
+
     }
 
     void SetLetters()
